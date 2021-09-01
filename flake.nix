@@ -19,7 +19,7 @@
 
     in {
       overlay = final: prev: {
-      	playnft_eth = pkgs.mkYarnPackage rec {
+      	playnft_eth = prev.pkgs.mkYarnPackage rec {
 	    name = "playnft-eth";
 	    src = ./.;
 	    packageJSON = ./package.json;
